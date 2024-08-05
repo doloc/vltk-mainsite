@@ -16,9 +16,9 @@ export default function EventLayout({
     return (
         <>
             {/* Section 1 */}
-            <div className="relative w-full h-screen overflow-hidden">
+            <div className="relative w-full aspect-[2560/1536] overflow-hidden">
                 <video
-                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    className="absolute top-0 left-0 w-full aspect-[2560/1536] object-cover"
                     src="/images/event-loidai/pc-banner-vid-loop.mp4"
                     autoPlay
                     loop

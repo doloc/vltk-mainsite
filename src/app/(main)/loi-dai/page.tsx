@@ -23,14 +23,14 @@ const LoiDaiLDP = () => {
                 <div className="absolute top-[5%] mb:top-[5%] w-[38%] mb:w-[75%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[image:var(--text-title-bg-url)]" style={{'--text-title-bg-url': `url(/images/event-loidai/text-title-bg.png)`} as CustomStyleProperties}>
                     <span className='bg-gradient-to-b from-[#B43616] to-[#CB130B] inline-block text-transparent bg-clip-text text-[2.5vw] mb:text-xl font-semibold tracking-wide' style={{fontFamily: 'SVN Desire'}}>PHẦN THƯỞNG</span>
                 </div>
-                <img className='absolute w-[11%] mb:w-[20%] bottom-[26%] mb:bottom-[32%] right-[19%] mb:right-0' src="/images/event-loidai/reward-1.png" alt="" />
-                <img className='absolute w-[10%] mb:w-[17%] bottom-[17%] mb:bottom-[33%] left-[23%] mb:left-[3%]' src="/images/event-loidai/reward-2.png" alt="" />
-                <img className='absolute w-[9%] mb:w-[14%] bottom-[16%] mb:bottom-[26%] right-[19%] mb:-right-[2%]' src="/images/event-loidai/reward-3.png" alt="" />
-                <img className='absolute w-[9%] mb:w-[16%] bottom-[20%] mb:bottom-[15%] right-[26%] mb:right-[7%]' src="/images/event-loidai/reward-4.png" alt="" />
-                <img className='absolute w-[9%] mb:w-[17%] bottom-[40%] mb:bottom-[57%] right-[17%] mb:-right-[2%]' src="/images/event-loidai/reward-5.png" alt="" />
-                <img className='absolute w-[10%] mb:w-[19%] bottom-[38%] mb:bottom-[64%] right-[24%] mb:right-[17%]' src="/images/event-loidai/reward-6.png" alt="" />
-                <img className='absolute w-[8%] mb:w-[20%] bottom-[23%] mb:bottom-[66%] left-[17%] mb:left-[3%]' src="/images/event-loidai/reward-7.png" alt="" />
-                <img className='absolute w-[10.5%] mb:w-[17%] bottom-[29%] mb:bottom-[17%] left-[21%] mb:-left-[2%]' src="/images/event-loidai/reward-8.png" alt="" />
+                <img className='absolute w-[11%] mb:w-[20%] bottom-[26%] mb:bottom-[32%] right-[19%] mb:right-0 animate-zoom' src="/images/event-loidai/reward-1.png" alt="" />
+                <img className='absolute w-[10%] mb:w-[17%] bottom-[17%] mb:bottom-[33%] left-[23%] mb:left-[3%] animate-zoom' src="/images/event-loidai/reward-2.png" alt="" />
+                <img className='absolute w-[9%] mb:w-[14%] bottom-[16%] mb:bottom-[26%] right-[19%] mb:-right-[2%] animate-zoom' src="/images/event-loidai/reward-3.png" alt="" />
+                <img className='absolute w-[9%] mb:w-[16%] bottom-[20%] mb:bottom-[15%] right-[26%] mb:right-[7%] animate-zoom' src="/images/event-loidai/reward-4.png" alt="" />
+                <img className='absolute w-[9%] mb:w-[17%] bottom-[40%] mb:bottom-[57%] right-[17%] mb:-right-[2%] animate-zoom' src="/images/event-loidai/reward-5.png" alt="" />
+                <img className='absolute w-[10%] mb:w-[19%] bottom-[38%] mb:bottom-[64%] right-[24%] mb:right-[17%] animate-zoom' src="/images/event-loidai/reward-6.png" alt="" />
+                <img className='absolute w-[8%] mb:w-[20%] bottom-[23%] mb:bottom-[66%] left-[17%] mb:left-[3%] animate-zoom' src="/images/event-loidai/reward-7.png" alt="" />
+                <img className='absolute w-[10.5%] mb:w-[17%] bottom-[29%] mb:bottom-[17%] left-[21%] mb:-left-[2%] animate-zoom' src="/images/event-loidai/reward-8.png" alt="" />
                 <img className="absolute bottom-[5%] mb:bottom-[7%] w-[56%] mb:w-[90%]" src="/images/event-loidai/text-reward.png" alt="" />
             </div>
 
