@@ -2,32 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Thay đổi toàn bộ thanh cuộn */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Thay đổi phần cuộn */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Thay đổi phần track của thanh cuộn */
+::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 6px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Thay đổi phần khi hover lên phần cuộn */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@font-face {
+  font-family: 'SVN Desire';
+  src: url('/fonts/SVN-Desire') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UTM Alberta Heavy';
+  src: url('/fonts/UTM-Alberta-Heavy') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UTM Swiss Condensed';
+  src: url('/fonts/UTM-Swiss-Condensed') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title {
+  background: linear-gradient(180deg, #f97b00, #500000);;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  border-bottom: 1px solid #46544f;;
+}
+
+.title:before {
+  content: "";
+  display: inline-block;
+  background-image: url('/images/event-loidai/rule-sprites.png');
+  background-position: 0 -30px;
+  width: 208px;
+  height: 28px;
+  margin-right: 12px;
+  margin-left: auto;
+}
+
+.title::after {
+  content: "";
+  display: inline-block;
+  background-image: url('/images/event-loidai/rule-sprites.png');
+  background-position: 0 0;
+  width: 208px;
+  height: 28px;
+  margin-left: 12px;
+  margin-right: auto;
 }

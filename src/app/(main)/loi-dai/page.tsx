@@ -1,0 +1,57 @@
+import Footer from '@/components/footer/footer';
+import LeaderboardTable from '@/components/leaderboard/leaderboard';
+import Link from 'next/link'
+
+const LoiDaiLDP = () => {
+    type CustomStyleProperties = {
+        [key: string]: string | number;
+    };
+
+    return (
+        <>
+            {/* Section 2 */}
+            <div className="relative w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1019] mb:aspect-[640/936] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mb-sec2-bg.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-sec2-bg.jpg)`} as CustomStyleProperties}>
+                <div className="absolute top-[8%] mb:top-[3%] w-[38%] mb:w-[75%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[image:var(--text-title-bg-url)]" style={{'--text-title-bg-url': `url(/images/event-loidai/text-title-bg.png)`} as CustomStyleProperties}>
+                    <span className='bg-gradient-to-b from-[#B43616] to-[#CB130B] inline-block text-transparent bg-clip-text text-[2.5vw] mb:text-xl font-semibold tracking-wide' style={{fontFamily: 'SVN Desire'}}>QUẦN HÙNG HỘI TỤ</span>
+                </div>
+                <div className="absolute bottom-[15%] mb:bottom-0 w-[52%] mb:w-[98%] bg-cover bg-center bg-no-repeat aspect-[990/592] mb:aspect-[624/729] pc:bg-[image:var(--pc-video-bg-url)] mb:bg-[image:var(--mb-video-bg-url)]" style={{'--pc-video-bg-url': `url(/images/event-loidai/pc-video-bg-2.png)`, '--mb-video-bg-url': `url(/images/event-loidai/mb-video-bg.png)`} as CustomStyleProperties}>
+                </div>
+            </div>
+
+            {/* Section 3 */}
+            <div className="relative overflow-x-hidden w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1095] mb:aspect-[640/837] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mb-sec3-bg.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-sec3-bg.jpg)`} as CustomStyleProperties}>
+                <div className="absolute top-[5%] mb:top-[5%] w-[38%] mb:w-[75%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[image:var(--text-title-bg-url)]" style={{'--text-title-bg-url': `url(/images/event-loidai/text-title-bg.png)`} as CustomStyleProperties}>
+                    <span className='bg-gradient-to-b from-[#B43616] to-[#CB130B] inline-block text-transparent bg-clip-text text-[2.5vw] mb:text-xl font-semibold tracking-wide' style={{fontFamily: 'SVN Desire'}}>PHẦN THƯỞNG</span>
+                </div>
+                <img className='absolute w-[11%] mb:w-[20%] bottom-[26%] mb:bottom-[32%] right-[19%] mb:right-0' src="/images/event-loidai/reward-1.png" alt="" />
+                <img className='absolute w-[10%] mb:w-[17%] bottom-[17%] mb:bottom-[33%] left-[23%] mb:left-[3%]' src="/images/event-loidai/reward-2.png" alt="" />
+                <img className='absolute w-[9%] mb:w-[14%] bottom-[16%] mb:bottom-[26%] right-[19%] mb:-right-[2%]' src="/images/event-loidai/reward-3.png" alt="" />
+                <img className='absolute w-[9%] mb:w-[16%] bottom-[20%] mb:bottom-[15%] right-[26%] mb:right-[7%]' src="/images/event-loidai/reward-4.png" alt="" />
+                <img className='absolute w-[9%] mb:w-[17%] bottom-[40%] mb:bottom-[57%] right-[17%] mb:-right-[2%]' src="/images/event-loidai/reward-5.png" alt="" />
+                <img className='absolute w-[10%] mb:w-[19%] bottom-[38%] mb:bottom-[64%] right-[24%] mb:right-[17%]' src="/images/event-loidai/reward-6.png" alt="" />
+                <img className='absolute w-[8%] mb:w-[20%] bottom-[23%] mb:bottom-[66%] left-[17%] mb:left-[3%]' src="/images/event-loidai/reward-7.png" alt="" />
+                <img className='absolute w-[10.5%] mb:w-[17%] bottom-[29%] mb:bottom-[17%] left-[21%] mb:-left-[2%]' src="/images/event-loidai/reward-8.png" alt="" />
+                <img className="absolute bottom-[5%] mb:bottom-[7%] w-[56%] mb:w-[90%]" src="/images/event-loidai/text-reward.png" alt="" />
+            </div>
+
+            {/* Section 4 */}
+            <div className="relative overflow-x-hidden w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1395] mb:aspect-[640/1135] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mb-sec4-bg.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-sec4-bg.jpg)`} as CustomStyleProperties}>
+                <div className="absolute top-[6%] mb:top-[2%] w-[42%] mb:w-[77%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[image:var(--text-title-bg-url)]" style={{'--text-title-bg-url': `url(/images/event-loidai/text-title-bg.png)`} as CustomStyleProperties}>
+                    <span className='bg-gradient-to-l from-[#EA1D13] to-[#9D1605] inline-block text-transparent bg-clip-text text-[2.5vw] mb:text-xl font-semibold tracking-wide' style={{fontFamily: 'SVN Desire'}}>VINH DANH ĐẠI CAO THỦ</span>
+                </div>
+                {/* BXH */}
+                <div className="absolute w-[66%] mb:w-full bottom-[18%] mb:bottom-[14%] flex flex-col items-center bg-cover bg-center bg-no-repeat aspect-[1224/785] mb:aspect-[640/783] 
+                    bg-[image:var(--pc-bxh-bg-url)] mb:bg-[image:var(--mb-bxh-bg-url)]" style={{'--pc-bxh-bg-url': `url(/images/event-loidai/pc-bxh-bg.png)`, '--mb-bxh-bg-url': `url(/images/event-loidai/mb-bxh-bg.png)`, fontFamily: 'UTM Swiss Condensed'} as CustomStyleProperties}>
+                    <span className='relative mt-[5%] text-[#851915] text-[1.5vw] mb:text-base'>Bảng Xếp Hạng được cập nhật vào ... mỗi ngày</span>
+                    <div className="relative w-[82%] mb:w-[90%] h-[30vw] mb:h-[100vw] mt-[1%]">
+                        <LeaderboardTable />
+                    </div>
+                </div>
+                {/* Fotter */}
+                <Footer />
+            </div>
+        </>
+    )
+}
+
+export default LoiDaiLDP
