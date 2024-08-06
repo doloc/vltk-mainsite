@@ -11,7 +11,7 @@ const LoiDaiLDP = () => {
         <>
             {/* Section 2 */}
             <div className="relative w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1019] mb:aspect-[640/936] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mb-sec2-bg.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-sec2-bg.jpg)`} as CustomStyleProperties}>
-                <div className="absolute top-[8%] mb:top-[3%] w-[38%] mb:w-[75%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[image:var(--text-title-bg-url)]" style={{'--text-title-bg-url': `url(/images/event-loidai/text-title-bg.png)`} as CustomStyleProperties}>
+                <div className="absolute top-[8%] mb:top-[3%] w-[38%] mb:w-[75%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[url('/images/event-loidai/text-title-bg.png')]">
                     <span className='bg-gradient-to-b from-[#B43616] to-[#CB130B] inline-block text-transparent bg-clip-text text-[2.5vw] mb:text-xl font-semibold tracking-wide' style={{fontFamily: 'SVN Desire'}}>QUẦN HÙNG HỘI TỤ</span>
                 </div>
                 <div className="absolute bottom-[15%] mb:bottom-0 w-[52%] mb:w-[98%] bg-cover bg-center bg-no-repeat aspect-[990/592] mb:aspect-[624/729] pc:bg-[image:var(--pc-video-bg-url)] mb:bg-[image:var(--mb-video-bg-url)]" style={{'--pc-video-bg-url': `url(/images/event-loidai/pc-video-bg-2.png)`, '--mb-video-bg-url': `url(/images/event-loidai/mb-video-bg.png)`} as CustomStyleProperties}>
@@ -20,7 +20,7 @@ const LoiDaiLDP = () => {
 
             {/* Section 3 */}
             <div className="relative overflow-x-hidden w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1095] mb:aspect-[640/837] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mb-sec3-bg.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-sec3-bg.jpg)`} as CustomStyleProperties}>
-                <div className="absolute top-[5%] mb:top-[5%] w-[38%] mb:w-[75%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[image:var(--text-title-bg-url)]" style={{'--text-title-bg-url': `url(/images/event-loidai/text-title-bg.png)`} as CustomStyleProperties}>
+                <div className="absolute top-[5%] mb:top-[5%] w-[38%] mb:w-[75%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[url('/images/event-loidai/text-title-bg.png')]">
                     <span className='bg-gradient-to-b from-[#B43616] to-[#CB130B] inline-block text-transparent bg-clip-text text-[2.5vw] mb:text-xl font-semibold tracking-wide' style={{fontFamily: 'SVN Desire'}}>PHẦN THƯỞNG</span>
                 </div>
                 <img className='absolute w-[11%] mb:w-[20%] bottom-[26%] mb:bottom-[32%] right-[19%] mb:right-0 animate-zoom' src="/images/event-loidai/reward-1.png" alt="" />
@@ -36,7 +36,7 @@ const LoiDaiLDP = () => {
 
             {/* Section 4 */}
             <div className="relative overflow-x-hidden w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1395] mb:aspect-[640/1135] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mb-sec4-bg.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-sec4-bg.jpg)`} as CustomStyleProperties}>
-                <div className="absolute top-[6%] mb:top-[2%] w-[42%] mb:w-[77%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[image:var(--text-title-bg-url)]" style={{'--text-title-bg-url': `url(/images/event-loidai/text-title-bg.png)`} as CustomStyleProperties}>
+                <div className="absolute top-[6%] mb:top-[2%] w-[42%] mb:w-[77%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[url('/images/event-loidai/text-title-bg.png')]">
                     <span className='bg-gradient-to-l from-[#EA1D13] to-[#9D1605] inline-block text-transparent bg-clip-text text-[2.5vw] mb:text-xl font-semibold tracking-wide' style={{fontFamily: 'SVN Desire'}}>VINH DANH ĐẠI CAO THỦ</span>
                 </div>
                 {/* BXH */}
