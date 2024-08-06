@@ -52,13 +52,13 @@ const HomePage = () => {
             <NavHeader />
             
             {/* Section 1 */}
-            <div className="relative w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1024] mb:aspect-[640/1115] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/mb-banner-bg.jpg)`, '--bg-pc-url': `url(/images/pc-banner-bg.jpg)`} as CustomStyleProperties}>
-                <img ref={effect3Ref} className="absolute top-[0.5%] right-[2%] mix-blend-plus-lighter" src="/images/effect-sword.png" alt="" />
+            <div className="relative overflow-x-hidden w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1024] mb:aspect-[640/1115] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/mb-banner-bg.jpg)`, '--bg-pc-url': `url(/images/pc-banner-bg.jpg)`} as CustomStyleProperties}>
+                <img ref={effect3Ref} className="mb:hidden absolute top-[0.5%] right-[2%] mix-blend-plus-lighter" src="/images/effect-sword.png" alt="" />
                 <img className="absolute w-[8%] mb:w-[17%] top-[9%] mb:top-[13%] left-[1%] mb:left-[5%]" src="/images/tag18.jpg" alt="" />
                 <img className="absolute w-[19%] mb:w-[27%] bottom-[40%] mb:bottom-[42%] right-[19%] mb:right-[5%]" src="/images/text-phienbanzalo.png" alt="" />
                 <img className="mb:hidden absolute w-[82%] bottom-[2%]" src="/images/text-volamtruyenky-pc.png" alt="" />
-                <img ref={effect1Ref} className="absolute bottom-[19.5%] left-[36%] mix-blend-plus-lighter" src="/images/effect-text-lam.png" alt="" />
-                <img ref={effect2Ref} className="absolute bottom-[28.5%] right-[16%] mix-blend-plus-lighter" src="/images/effect-text-h5.png" alt="" />
+                <img ref={effect1Ref} className="mb:hidden absolute bottom-[19.5%] left-[36%] mix-blend-plus-lighter" src="/images/effect-text-lam.png" alt="" />
+                <img ref={effect2Ref} className="mb:hidden absolute bottom-[28.5%] right-[16%] mix-blend-plus-lighter" src="/images/effect-text-h5.png" alt="" />
                 <img className="pc:hidden absolute w-[75%] bottom-[32%]" src="/images/text-volamtruyenky-mb.png" alt="" />
                 <img className="absolute w-[55%] mb:w-[98%] bottom-[19%] mb:bottom-[27%]" src="/images/text-volamchiton.png" alt="" />
                 <div className="absolute w-[35%] mb:w-[95%] bottom-[2%] mb:bottom-[11%] flex justify-center items-center gap-[2%] bg-cover bg-center bg-no-repeat aspect-[714/190] bg-[image:var(--app-info-bg-url)]" style={{'--app-info-bg-url': `url(/images/app-info-bg.png)`} as CustomStyleProperties}>
