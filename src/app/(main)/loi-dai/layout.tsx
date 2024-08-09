@@ -1,4 +1,5 @@
 'use client'
+import Footer from "@/components/footer/footer";
 import VideoBackground from "@/components/video-background/video_background";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -73,6 +74,9 @@ export default function EventLayout({
                 </div>
             </div> */}
             {children}
+
+            {/* Fotter */}
+            <Footer />
         </>
        
     );

@@ -24,7 +24,6 @@ const RulePage = () => {
                         <p>Từ tháng 06/2023, nhằm tôn vinh các cao thủ xuất sắc nhất đại diện từng máy chủ, giải đấu đặc biệt Vô Song Hào Kiệt 2023 sẽ chính thức khởi tranh, giúp đại hiệp giang hồ thỏa sức thể hiện bản lĩnh và đoạt lấy vô số phần thưởng giá trị liên thành.</p>
                     </div>
                 </div>
-                <Footer />
             </div>
         </>
     )

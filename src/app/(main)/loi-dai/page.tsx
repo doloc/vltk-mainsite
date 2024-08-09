@@ -35,20 +35,18 @@ const LoiDaiLDP = () => {
             </div>
 
             {/* Section 4 */}
-            <div className="relative overflow-x-hidden w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1395] mb:aspect-[640/1135] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mb-sec4-bg.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-sec4-bg.jpg)`} as CustomStyleProperties}>
-                <div className="absolute top-[6%] mb:top-[2%] w-[42%] mb:w-[77%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[url('/images/event-loidai/text-title-bg.png')]">
+            <div className="relative overflow-x-hidden w-full flex justify-center bg-cover bg-center bg-no-repeat aspect-[1920/1154] mb:aspect-[640/997] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mb-sec4-bg.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-sec4-bg.jpg)`} as CustomStyleProperties}>
+                <div className="absolute top-[7%] mb:top-[2%] w-[42%] mb:w-[77%] flex justify-center items-center bg-cover bg-center bg-no-repeat aspect-[729/149] bg-[url('/images/event-loidai/text-title-bg.png')]">
                     <span className='bg-gradient-to-l from-[#EA1D13] to-[#9D1605] inline-block text-transparent bg-clip-text text-[2.5vw] mb:text-xl font-semibold tracking-wide' style={{fontFamily: 'SVN Desire'}}>VINH DANH ĐẠI CAO THỦ</span>
                 </div>
                 {/* BXH */}
-                <div className="absolute w-[66%] mb:w-full bottom-[18%] mb:bottom-[14%] flex flex-col items-center bg-cover bg-center bg-no-repeat aspect-[1224/785] mb:aspect-[640/783] 
+                <div className="absolute w-[66%] mb:w-full bottom-[2%] flex flex-col items-center bg-cover bg-center bg-no-repeat aspect-[1224/785] mb:aspect-[640/783] 
                     bg-[image:var(--pc-bxh-bg-url)] mb:bg-[image:var(--mb-bxh-bg-url)]" style={{'--pc-bxh-bg-url': `url(/images/event-loidai/pc-bxh-bg.png)`, '--mb-bxh-bg-url': `url(/images/event-loidai/mb-bxh-bg.png)`, fontFamily: 'UTM Swiss Condensed'} as CustomStyleProperties}>
                     <span className='relative mt-[5%] text-[#851915] text-[1.5vw] mb:text-base'>Bảng Xếp Hạng được cập nhật vào ... mỗi ngày</span>
                     <div className="relative w-[82%] mb:w-[90%] h-[30vw] mb:h-[100vw] mt-[1%]">
                         <LeaderboardTable />
                     </div>
                 </div>
-                {/* Fotter */}
-                <Footer />
             </div>
         </>
     )

@@ -20,7 +20,6 @@ const RewardPage = () => {
                         <p>Hãy cùng cập nhật ngay hệ thống phần thưởng cực chất từ giải đấu Bang Hội Tranh Đoạt Chiến 2023 và sẵn sàng chuẩn bị chiến lược phù hợp để tranh đoạt, xưng bá thiên hạ.</p>
                     </div>
                 </div>
-                <Footer />
             </div>
             
         </>
