@@ -83,3 +83,80 @@
   filter: drop-shadow(0 0 1px #94644C);
 }
 
+.line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e3ac75, transparent);
+  filter: drop-shadow(0 0 1px #815436);
+}
+
+/* HomePage - Section 4 - Swipper */
+.swiper-button-disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.pagination {
+  z-index: 100;
+  position: absolute;
+  width: 25% !important;
+  left: 47% !important;
+  bottom: 13% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    left: 37% !important;
+    bottom: 9% !important;
+  }
+}
+
+.swiper-pagination-bullet {
+  z-index: 100;
+  background-color: transparent !important;
+  background-image: url("/images/swiper-dot.png") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  width: 1.5vw !important;
+  height: 1.5vw !important;
+  border-radius: 0%;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-pagination-bullet {
+    width: 2.5vw !important;
+    height: 2.5vw !important;
+  }
+  
+}
+
+.swiper-pagination-bullet-active {
+  z-index: 100;
+  background-color: transparent !important;
+  background-image: url("/images/swiper-active-dot.png") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  width: 1.5vw !important;
+  height: 1.5vw !important;
+  border-radius: 0%;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-pagination-bullet-active {
+    width: 2.5vw !important;
+    height: 2.5vw !important;
+  }
+  
+}
+
+.custom-gradient-bg {
+  background: rgb(153,106,65);
+background: linear-gradient(90deg, rgba(153,106,65,1) 0%, rgba(115,71,45,1) 25%, rgba(103,60,39,1) 50%, rgba(115,71,45,1) 75%, rgba(153,106,65,1) 100%);
+}

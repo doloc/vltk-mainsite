@@ -10,6 +10,11 @@ import homePageApiRequest from "@/api-requests/home-page";
 import { Post } from "@/entity/post";
 import { convertPostDate } from "@/lib/utils";
 import Footer from "@/components/footer/footer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const HomePage = () => {
     const [isLoading, setIsLoading] = useRecoilState(loadingState)
@@ -142,10 +147,127 @@ const HomePage = () => {
 
             {/* Section 3 */}
             <div className="relative flex justify-center w-full bg-cover bg-center bg-no-repeat aspect-[1920/1081] mb:aspect-[640/1129] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/mb-sec3-bg.jpg)`, '--bg-pc-url': `url(/images/pc-sec3-bg.jpg)`} as CustomStyleProperties}>
+            
             </div>
 
             {/* Section 4 */}
             <div className="relative flex justify-center w-full bg-cover bg-center bg-no-repeat aspect-[1920/1078] mb:aspect-[640/1005] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/mb-sec4-bg.jpg)`, '--bg-pc-url': `url(/images/pc-sec4-bg.jpg)`} as CustomStyleProperties}>
+                <div className="absolute w-[22.4%] mb:w-[72%] h-[59%] mb:h-[34.5%] top-[21%] left-[6.1%] mb:left-[13%] custom-gradient-bg flex flex-col justify-center items-center py-[5%] gap-[6%] mb:gap-[5%]">
+                    <div className="w-full flex flex-col">
+                        <div className="mb:hidden w-full grid grid-cols-[20%_80%] gap-[3%] px-[5%]">
+                            <img className="h-[3vw]" src="/images/icon-vienchinh.png" alt="" />
+                            <div className="flex flex-col justify-center">
+                                <p className="text-white font-semibold text-[1.2vw]">Cập Nhật Mới Nổi Bật</p>
+                                <p className="text-[#FFFCCB] text-[0.9vw]">Viễn Chinh, Kết Nghĩa, Kim Ô..</p>
+                            </div>
+                        </div>
+                        <div className="pc:hidden flex items-center gap-[2%] px-[5%]">
+                            <img className="h-[5vw]" src="/images/icon-vienchinh.png" alt="" />
+                            <p className="text-white font-semibold text-[2.2vw]">Cập Nhật Mới Nổi Bật</p>
+                            <p className="text-[#FFFCCB] text-[1.8vw]">Viễn Chinh, Kết Nghĩa, Kim Ô..</p>
+                        </div>
+                        <div className="line mt-[5%]"></div>
+                    </div>
+                    <div className="w-full flex flex-col">
+                        <div className="mb:hidden w-full grid grid-cols-[20%_80%] gap-[3%] px-[5%]">
+                            <img className="h-[2.4vw]" src="/images/icon-congthanhchien.png" alt="" />
+                            <div className="flex flex-col justify-center">
+                                <p className="text-white font-semibold text-[1.2vw]">Công Thành Chiến</p>
+                                <p className="text-[#FFFCCB] text-[0.9vw]">Thiên hạ đệ nhất Bang</p>
+                            </div>
+                        </div>
+                        <div className="pc:hidden flex items-center gap-[2%] px-[5%]">
+                            <img className="h-[4vw]" src="/images/icon-congthanhchien.png" alt="" />
+                            <p className="text-white font-semibold text-[2.2vw]">Công Thành Chiến</p>
+                            <p className="text-[#FFFCCB] text-[1.8vw]">Thiên hạ đệ nhất Bang</p>
+                        </div>
+                        <div className="line mt-[5%]"></div>
+                    </div>
+                    <div className="w-full flex flex-col">
+                        <div className="mb:hidden w-full grid grid-cols-[20%_80%] gap-[3%] px-[5%]">
+                            <img className="h-[4vw]" src="/images/icon-loidai.png" alt="" />
+                            <div className="flex flex-col justify-center">
+                                <p className="text-white font-semibold text-[1.2vw]">Lôi Đài Chiến - PK 1v1</p>
+                                <p className="text-[#FFFCCB] text-[0.9vw]">Xưng danh Bá Chủ</p>
+                            </div>
+                        </div>
+                        <div className="pc:hidden flex items-center gap-[2%] px-[5%]">
+                            <img className="h-[7vw]" src="/images/icon-loidai.png" alt="" />
+                            <p className="text-white font-semibold text-[2.2vw]">Lôi Đài Chiến - PK 1v1</p>
+                            <p className="text-[#FFFCCB] text-[1.8vw]">Xưng danh Bá Chủ</p>
+                        </div>
+                        <div className="line mt-[5%]"></div>
+                    </div>
+                    <div className="w-full flex flex-col">
+                        <div className="mb:hidden w-full grid grid-cols-[20%_80%] gap-[3%] px-[5%]">
+                            <img className="h-[3vw]" src="/images/icon-tanlang.png" alt="" />
+                            <div className="flex flex-col justify-center">
+                                <p className="text-white font-semibold text-[1.2vw]">Tần Lăng</p>
+                                <p className="text-[#FFFCCB] text-[0.9vw]">Vật đổi sao dời, bất khả xâm phạm</p>
+                            </div>
+                        </div>
+                        <div className="pc:hidden flex items-center gap-[2%] px-[5%]">
+                            <img className="h-[5vw]" src="/images/icon-tanlang.png" alt="" />
+                            <p className="text-white font-semibold text-[2.2vw]">Tần Lăng</p>
+                            <p className="text-[#FFFCCB] text-[1.8vw]">Vật đổi sao dời, bất khả xâm phạm</p>
+                        </div>
+                        <div className="line mt-[5%]"></div>
+                    </div>
+                    <div className="w-full flex flex-col">
+                        <div className="mb:hidden w-full grid grid-cols-[20%_80%] gap-[3%] px-[5%]">
+                            <img className="h-[3vw]" src="/images/icon-tongkim.png" alt="" />
+                            <div className="flex flex-col justify-center">
+                                <p className="text-white font-semibold text-[1.2vw]">Chiến Trường Tống - Kim</p>
+                                <p className="text-[#FFFCCB] text-[0.9vw]">PK 20v20, hoang dã chiến server</p>
+                            </div>
+                        </div>
+                        <div className="pc:hidden flex items-center gap-[2%] px-[5%]">
+                            <img className="h-[5vw]" src="/images/icon-tongkim.png" alt="" />
+                            <p className="text-white font-semibold text-[2.2vw]">Chiến Trường Tống - Kim</p>
+                            <p className="text-[#FFFCCB] text-[1.8vw]">PK 20v20, hoang dã chiến server</p>
+                        </div>
+                        {/* <div className="line mt-[5%]"></div> */}
+                    </div>
+                </div>
+                <div className="absolute w-[55%] mb:w-[90%] bottom-[16%] mb:bottom-[11%] pc:right-[13%] bg-cover bg-center bg-no-repeat aspect-[1060/600] bg-[url('/images/rectangle-banner.png')] flex justify-center items-center">
+                    <Swiper 
+                        modules={[Navigation, Pagination, Autoplay]}
+                        centeredSlides={true}
+                        loop={true}
+                        navigation={{
+                            enabled: true,
+                            prevEl: ".swiper-prev",
+                            nextEl: ".swiper-next",
+                        }}
+                        pagination={{
+                            el: ".pagination",
+                            clickable: true,
+                        }}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        }}
+                        className="w-[99%] h-[99%]"
+                    >
+                        <SwiperSlide>
+                            <img className="w-full" src="/images/banner-game.jpg" alt="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="w-full" src="/images/banner-game.jpg" alt="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="w-full" src="/images/banner-game.jpg" alt="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="w-full" src="/images/banner-game.jpg" alt="" />
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+                <div className="pagination"></div>
+                <div className="z-50 absolute w-[59%] mb:w-[95%] pc:left-[30%] bottom-[40%] mb:bottom-[25%] flex justify-between">
+                    <img className="swiper-prev w-[7%] cursor-pointer hover:brightness-110" src="/images/swiper-prev.png" alt="" />
+                    <img className="swiper-next w-[7%] cursor-pointer hover:brightness-110" src="/images/swiper-next.png" alt="" />
+                </div>
             </div>
 
             {/* Footer */}

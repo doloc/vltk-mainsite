@@ -17,7 +17,7 @@ export default function EventLayout({
     return (
         <>
             {/* Section 1 */}
-            <div className="relative w-full aspect-[2560/1536] overflow-hidden">
+            <div className="mb:hidden relative w-full aspect-[2560/1536] overflow-hidden">
                 <video
                     className="absolute top-0 left-0 w-full aspect-[2560/1536] object-cover"
                     src="/images/event-loidai/pc-banner-vid-loop.mp4"
@@ -50,7 +50,7 @@ export default function EventLayout({
             </div>
 
             {/* Use Image */}
-            {/* <div className="relative w-full bg-cover bg-center bg-no-repeat aspect-[1920/1085] mb:aspect-[640/960] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mobile-banner-event.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-banner-event.jpg)`} as CustomStyleProperties}>
+            <div className="pc:hidden relative w-full bg-cover bg-center bg-no-repeat aspect-[1920/1085] mb:aspect-[640/960] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mobile-banner-event.jpg)`, '--bg-pc-url': `url(/images/event-loidai/pc-banner-event.jpg)`} as CustomStyleProperties}>
                 <img className="absolute top-[4%] left-[1.5%] w-[8%] mb:hidden" src="/images/event-loidai/tag18.png" alt="" />
                 <div className="absolute pc:hidden top-0 left-0 w-full bg-cover bg-center bg-no-repeat mb:aspect-[639/76] mb:bg-[image:var(--bg-mobile-url)]" style={{'--bg-mobile-url': `url(/images/event-loidai/mobile-event-header-bg.jpg)`} as CustomStyleProperties}>
                     <img className="absolute w-[25%] top-[13%] left-[24%] hover:cursor-pointer hover:brightness-110" src="/images/event-loidai/btn-choingay.png" alt="" onClick={() =>  router.push("https://zalo.vltkh5.zing.vn/play-game")} />
@@ -72,7 +72,7 @@ export default function EventLayout({
                 <div className="absolute pc:hidden w-full bottom-[2%] flex justify-center animate-bounce">
                     <img className='pc:hidden w-[25%] ' src="/images/event-loidai/scrolling.png" alt="" />
                 </div>
-            </div> */}
+            </div>
             {children}
 
             {/* Fotter */}
