@@ -1,7 +1,7 @@
 'use client'
 import NavHeader from "@/components/header/nav-header"
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import SideBar from "@/components/side-bar/side-bar";
 import { useRecoilState } from "recoil";
@@ -15,6 +15,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { characters } from "@/lib/characters";
 
 const HomePage = () => {
     const [isLoading, setIsLoading] = useRecoilState(loadingState)
@@ -26,6 +27,27 @@ const HomePage = () => {
     type CustomStyleProperties = {
         [key: string]: string | number;
     };
+
+    const [activeIndex, setActive] = useState(0);
+    const character = characters[activeIndex];
+
+    useEffect(() => {
+        console.log('activeIndex ', activeIndex);
+        
+    }, [activeIndex])
+
+    useEffect(() => {
+        let currentStep = 0;
+        const timer = setInterval(() => {
+          if (currentStep < characters.length - 1) {
+            currentStep = currentStep + 1;
+          }else{
+            currentStep = currentStep - characters.length + 1;       
+          }
+          setActive(currentStep);
+        }, 7000);
+        return () => clearInterval(timer);
+      },[])
 
     useEffect(() => {
         if (effect1Ref.current && effect2Ref.current && effect3Ref.current) {
@@ -147,7 +169,67 @@ const HomePage = () => {
 
             {/* Section 3 */}
             <div className="relative flex justify-center w-full bg-cover bg-center bg-no-repeat aspect-[1920/1081] mb:aspect-[640/1129] mb:bg-[image:var(--bg-mobile-url)] bg-[image:var(--bg-pc-url)]" style={{'--bg-mobile-url': `url(/images/mb-sec3-bg.jpg)`, '--bg-pc-url': `url(/images/pc-sec3-bg.jpg)`} as CustomStyleProperties}>
-            
+                <div className="relative w-[90%] h-[80%] mb:h-[85%] top-[20%] mb:top-[15%] flex pc:justify-center mb:flex-col mb:items-center">
+                    {/* character navigater */}
+                    <div className="z-50 w-[45%] mb:w-full h-[12%] flex justify-center gap-[2%]">
+                        <div className="h-[70%] w-auto hover:cursor-pointer hover:brightness-110" onClick={() => setActive(Math.max(0, activeIndex - 1))}>
+                            <img className="h-full" src="/images/characters/left-arrow.png" alt="" />
+                        </div>
+                        {characters.map((char, index) => (
+                            <div key={index} className="flex flex-col justify-between items-center hover:cursor-pointer hover:brightness-110" onClick={() => setActive(index)}>
+                                <img className="h-[70%]" src={char.icon} alt="" />
+                                <p className="text-[#FCF2B8] font-semibold">{char.name}</p>
+                            </div>
+                        ))}
+                        <div className="h-[70%] w-auto hover:cursor-pointer hover:brightness-110" onClick={() => setActive(Math.min(characters.length - 1, activeIndex + 1)) }>
+                            <img className="h-full hover:cursor-pointer hover:brightness-110" src="/images/characters/right-arrow.png" alt="" />
+                        </div>
+                    </div>
+                    {/* character */}
+                    <div className="absolute mb:relative mb:flex mb:flex-col mb:items-center left-[1%] bottom-0 w-full h-full">
+                        <img className="w-[53%] mb:w-full" src={character.avatar} alt="" />
+                        {/* character desc */}
+                        <div className="absolute pc:right-0 px-[5%] w-[50%] mb:w-full bottom-[10%] mb:bottom-0 flex flex-col mb:items-center gap-[0.5vw]">
+                            <img className="w-[50%] mb:w-[70%]" src={character.imgName} alt="" />
+                            <div className="ml-[2%] mb:ml-[10%] flex flex-col">
+                                <div className="flex items-center">
+                                    <img className="h-full mr-[1%]" src="/images/characters/point.png" alt="" />
+                                    <p className="text-[1.5vw] mb:text-[3vw] text-[#FFFAD8]">Đặc điểm:</p> 
+                                    <p className="text-[1.5vw] mb:text-[3vw] text-[#FFFFFF]">{character.detail}</p>
+                                </div>
+                                <div className="flex items-center">
+                                    <img className="h-full mr-[1%]" src="/images/characters/point.png" alt="" />
+                                    <p className="text-[1.5vw] mb:text-[3vw] text-[#FFFAD8]">Ngũ hành:</p> 
+                                    <p className="text-[1.5vw] mb:text-[3vw] text-[#FFFFFF]">{character.element}</p>
+                                </div>
+                                <div className="flex items-center">
+                                    <img className="h-full mr-[1%]" src="/images/characters/point.png" alt="" />
+                                    <p className="text-[1.5vw] mb:text-[3vw] text-[#FFFAD8]">Vũ khí:</p> 
+                                    <p className="text-[1.5vw] mb:text-[3vw] text-[#FFFFFF]">{character.weapon}</p>
+                                </div>
+                                <div className="flex items-center">
+                                    <img className="h-full mr-[1%]" src="/images/characters/point.png" alt="" />
+                                    <p className="text-[1.5vw] mb:text-[3vw] text-[#FFFAD8]">Khắc chế:</p> 
+                                    <p className="text-[1.5vw] mb:text-[3vw] text-[#FFFFFF]">{character.restrainer}</p>
+                                </div>
+                                <div className="w-full mt-[2%] pc:ml-[2%]">
+                                    <p className="text-[1.5vw] mb:text-[3vw] text-[#FFFFFF]">{character.desc}</p>
+                                </div>
+                            </div>
+                            <div className="w-full flex mb:justify-center">
+                                <div className="w-[23%] flex justify-center items-center text-[1.5vw] mb:text-[3vw] text-[#FFFAD8] bg-cover bg-center bg-no-repeat aspect-[1/1] bg-[url('/images/characters/shape-IconSkill.png')]">
+                                    <p>Skill</p>
+                                </div>
+                                <div className="w-[23%] flex justify-center items-center text-[1.5vw] mb:text-[3vw] text-[#FFFAD8] bg-cover bg-center bg-no-repeat aspect-[1/1] bg-[url('/images/characters/shape-IconSkill.png')]">
+                                    <p>Skill</p>
+                                </div>
+                                <div className="w-[23%] flex justify-center items-center text-[1.5vw] mb:text-[3vw] text-[#FFFAD8] bg-cover bg-center bg-no-repeat aspect-[1/1] bg-[url('/images/characters/shape-IconSkill.png')]">
+                                    <p>Skill</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* Section 4 */}
